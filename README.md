@@ -12,3 +12,5 @@ This is Bash script to auto clean the result from the blazescan with too many fe
  - Provides you the crons of these bad users so that you can inspect manually.
  
  More info on balzescan : https://github.com/Hestat/blazescan
+
+NOTE: This script was made on 2019-05-27 and the newer blazescan version might produce newer result patterns which should be handled manually. You can add the newer patterns to the script according to their nature.
