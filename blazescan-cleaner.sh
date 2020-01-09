@@ -16,8 +16,8 @@ echo "Removing old Quarantined folders older than 20 days (if any):"
 echo "--------------------------------------------------------------------"
 find  /root/quarantine-blazescan/ -maxdepth 1 ! -path /root/quarantine-blazescan/ -mtime +20 -type d -printf '%p\n' -exec rm -rf {} \;
 echo "--------------------------------------------------------------------"
-mkdir /home/user/SUSPFILES_`date +%F` &>/dev/null
-cd  /home/user/SUSPFILES_`date +%F`
+mkdir /tmp/SUSPFILES_`date +%F` &>/dev/null
+cd  /tmp/SUSPFILES_`date +%F`
 rm -rf *.txt
 
 echo
@@ -185,7 +185,7 @@ echo
 echo "-------------------------------------------------------------------------"
 echo "--------------------------  END OF THE SCRIPT  --------------------------"
 echo
-echo -e " ${RED} /home/user/SUSPFILES_`date +%F` => The directory contains above splitted patterns ${NC} ";
+echo -e " ${RED} /tmp/SUSPFILES_`date +%F` => The directory contains above splitted patterns ${NC} ";
 echo#!/bin/bash
 ###################################################
 ## Script name : all-in-one-blazescan.sh         ##
@@ -204,8 +204,8 @@ echo "Removing old Quarantined folders older than 20 days (if any):"
 echo "--------------------------------------------------------------------"
 find  /root/quarantine-blazescan/ -maxdepth 1 ! -path /root/quarantine-blazescan/ -mtime +20 -type d -printf '%p\n' -exec rm -rf {} \;
 echo "--------------------------------------------------------------------"
-mkdir /home/user/SUSPFILES_`date +%F` &>/dev/null
-cd  /home/user/SUSPFILES_`date +%F`
+mkdir /tmp/SUSPFILES_`date +%F` &>/dev/null
+cd  /tmp/SUSPFILES_`date +%F`
 rm -rf *.txt
 
 echo
@@ -373,5 +373,5 @@ echo
 echo "-------------------------------------------------------------------------"
 echo "--------------------------  END OF THE SCRIPT  --------------------------"
 echo
-echo -e " ${RED} /home/user/SUSPFILES_`date +%F` => The directory contains above splitted patterns ${NC} ";
+echo -e " ${RED} /tmp/SUSPFILES_`date +%F` => The directory contains above splitted patterns ${NC} ";
 echo
